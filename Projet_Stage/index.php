@@ -17,6 +17,32 @@
 		require('navbar.php');
 		?>
 
+		<?php
+		require("contact/connexion.php");
+		session_start();
+		$co = connexionBdd();
+		$message = "";
+
+	      //Connexion de l'utilisateur si le pseudo et le mot de passe est bon
+		if (isset($_POST["submit"])) {
+			$pseudo = $_POST["pseudo"];
+			$password = hash('sha256', $_POST["password"]);
+
+			$query = $co->prepare("SELECT * FROM user WHERE name_user=:name_user and password_user=:password_user");
+			$query->bindParam(":name_user", $pseudo);
+			$query->bindParam(":password_user", $password);
+			$query->execute();
+			$result = $query->fetchAll();
+			$rows = $query->rowCount();
+			if ($rows == 1) {
+				$_SESSION["pseudo"] = $pseudo;
+				header("Location: vue.php");
+			} else {
+				$message = "Le nom d'utilisateur ou le mot de passe est incorrect";
+			}
+		}
+		?>
+
 		<!-- Formulaire de connexion -->
 		<div class="loginbox">
 			<form action="" method="post">
@@ -25,6 +51,7 @@
 				<p>mot de passe</p>
 				<input type="password" name="password" placeholder="Entrez votre mot de passe">
 				<input type="submit" name="submit" value="valider">
+				<p><?php echo $message ?></p>
 			</form>
 		</div>
 
