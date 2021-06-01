@@ -32,15 +32,15 @@
 			$query->bindParam(":name_user", $pseudo);
 			$query->bindParam(":password_user", $password);
 			$query->execute();
-			$result = $query->fetchAll();
+			$result = $query->fetch();
 			$rows = $query->rowCount();
 			if ($rows == 1) {
 				$_SESSION["pseudo"] = $pseudo;
+				$_SESSION["role"] = $result['role_user'];
+				// echo $_SESSION['role'];
 				header("Location: vue.php");
 			} else {
 				$message = "Le nom d'utilisateur ou le mot de passe est incorrect";
-				var_dump($result);
-				echo $pseudo, $password;
 			}
 		}
 		?>

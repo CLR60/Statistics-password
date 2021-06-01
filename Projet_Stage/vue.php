@@ -13,21 +13,52 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
 	<!-- On appelle la navbar -->
+	<?php 
+	session_start();
+	if ($_SESSION["role"] == "a") {
+		$btnAdmin = true; 
+		echo 'test';
+	}
+	?>
 	<?php
-	require('navbar.php');
+	include('navbar.php');
+	require("contact/connexion.php");
 	?>
 
-	<h1>Mon tableau de bord :</h1>
+
+
+	<h1>Visualisations des statistiques de mot de passe* :</h1>
 
 	<div class="grille">
-		<div class="grid-item"></div>
-		<div class="grid-item"></div>
-		<div class="grid-item"></div>
-		<div class="grid-item"></div>
-		<div class="grid-item"></div>
-		<div class="grid-item"></div>
+		<div class="grid-item">
+			
+		</div>
+
+		<div class="grid-item">
+			
+		</div>
+
+		<div class="grid-item">
+			
+		</div>
+
+		<div class="grid-item">
+			
+		</div>
+
+		<div class="grid-item">
+			
+		</div>
+
+		<div class="grid-item">
+			
+		</div>
+
 	</div>
 
+	<?php
+	require('footer.php');
+	?>
 
 </body>
 </html>

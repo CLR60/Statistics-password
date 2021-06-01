@@ -1,0 +1,40 @@
+.mentionLegale{
+	color: #FFFFFF ;
+	display: inline-block;
+	font-size: 12px;
+	padding-left: 20px;
+	
+}
+
+.mentionLegale2{
+	color: #FFFFFF;
+	display: inline-block;
+	font-size: 12px;
+	padding-left: 10px;
+
+}
+
+.mtl2{
+	text-align: center;
+}
+
+.mtl{
+ text-align: center;
+}
+
+
+
+.footer_class{
+	background-color: black ;
+	height: 100px;
+
+}
+
+.copyright{
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 12px;
+
+
+
+}

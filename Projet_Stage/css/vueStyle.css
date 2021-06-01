@@ -1,6 +1,7 @@
 body{
 	margin: 0px;
 	padding: 0px;
+	scroll-behavior: smooth;
 }
 
 h1{
@@ -27,4 +28,15 @@ h1{
 	height: 400px;
 	background-color: #FFF;
 	box-shadow: 1px 1px 12px #555;
+}
+
+.adminBtn {
+  background-color: #595959 ; 
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
