@@ -11,5 +11,5 @@
 	$pass = "root";
 
     // Nom de la base de données
-	$dbName = "leak";
+	$dbName = "project_leak";
 ?>

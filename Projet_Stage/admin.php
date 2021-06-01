@@ -26,7 +26,7 @@
 					<div class="partStat"></div>
 				</div>
 				<div class="col-md-6">
-					<div class="partUser">
+					<div class="partUser container">
 						<h3>Tous les utilisateurs : </h3>
 						<table class="table table-stripped table-bordered">
 							<thead>
@@ -36,9 +36,25 @@
 									<th>Actions</th>
 								</tr>
 							</thead>
-							<tbody>
-
-
+						<tbody>
+							<?php
+							require("contact/connexion.php");
+							$co = connexionBdd();
+							$query = $co->prepare("select * from user");
+							$query->execute();
+							while($donnée = $query->fetch()){
+								echo'
+								<tr>
+									<td>'.$donnée["name_user"].'</td>
+									<td width=100>'.$donnée["role_user"].'</td>
+									<td class="clearfix" width=220>
+										<a class="btn btn-outline-primary float-left">modifier</a>
+										<a class="btn btn-outline-danger float-right">supprimer</a>
+									</td>
+								</tr>
+								';
+							}
+							?>
 						</tbody>
 					</table>
 				</div>
