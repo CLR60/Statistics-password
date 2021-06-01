@@ -10,13 +10,24 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/vueStyle.css">
 </head>
-	<body data-spy="scroll" data-target=".navbar" data-offset="50">
-		
-		<!-- On appelle la navbar -->
-		<?php
-			require('navbar.php');
-		?>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+	<!-- On appelle la navbar -->
+	<?php
+	require('navbar.php');
+	?>
+
+	<h1>Mon tableau de bord :</h1>
+
+	<div class="grille">
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+	</div>
 
 
-	</body>
+</body>
 </html>

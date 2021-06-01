@@ -1,0 +1,30 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+h1{
+	color: #000;
+	font-weight: bold;
+	font-size: 40px;
+	margin-left: 70px;
+	margin-top: 80px;
+}
+
+.grille{
+	max-width: 1300px;
+	width: 100%;
+	height: auto;
+	margin: 120px auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 600px);
+	justify-content: center;
+	grid-gap: 80px;
+}
+
+.grid-item{
+	width: 600px;
+	height: 400px;
+	background-color: #FFF;
+	box-shadow: 1px 1px 12px #555;
+}

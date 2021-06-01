@@ -3,10 +3,6 @@
 body{
 	margin: 0px;
 	padding: 0px;
-	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/fond.jpg);
-	height: 700px;
-	background-size: cover;
-	background-position: center center;
 }
 
 
@@ -24,6 +20,7 @@ body{
 	transform: translate(-50%,-50%);
 	box-sizing: border-box;
 	padding: 70px 30px; 
+	box-shadow: 1px 1px 12px #555;
 }
 
 h1{
