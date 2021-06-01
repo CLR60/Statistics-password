@@ -1,0 +1,32 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+h1{
+	color: #000;
+	font-weight: bold;
+	font-size: 40px;
+	margin-left: 70px;
+	margin-top: 80px;
+}
+
+#accueilAdmin{
+	margin-top: 50px;
+	width: 100%;
+	height: 800px;
+}
+
+.partStat{
+	margin-top: 20px;
+	width: 100%;
+	height: 800px;
+	border: 1px solid #000;
+}
+
+.partUser{
+	margin-top: 20px;
+	width: 100%;
+	height: 800px;
+	border: 1px solid #000;
+}
