@@ -11,6 +11,11 @@ h1{
 	margin-top: 80px;
 }
 
+h3{
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
 #accueilAdmin{
 	margin-top: 50px;
 	width: 100%;
@@ -32,7 +37,16 @@ h1{
 }
 
 .ajoutFichier{
-	width: 100%;
+	width: 90%;
 	height: 150px;
 	background-color: lightgrey;
+	margin: 30px auto;
+}
+
+.ajoutFichier input[type="text"]{
+	border: 1px solid #333;
+	outline: none;
+	height: 40px;
+	color: #000;
+	font-size: 16px;
 }

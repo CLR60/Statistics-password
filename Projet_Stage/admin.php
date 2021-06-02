@@ -27,7 +27,7 @@
 						<div class="ajoutFichier">
 							<h3>Ajouter un fichier :</h3>
 							<input type="file" name="" placeholder="">
-							<input type="text" name="" placeholder="">
+							<input type="text" name="" placeholder="IDK THE NOM">
 						</div>
 					</div>
 				</div>
