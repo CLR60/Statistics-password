@@ -23,7 +23,13 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-6">
-					<div class="partStat"></div>
+					<div class="partStat">
+						<div class="ajoutFichier">
+							<h3>Ajouter un fichier :</h3>
+							<input type="file" name="" placeholder="">
+							<input type="text" name="" placeholder="">
+						</div>
+					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="partUser container">
