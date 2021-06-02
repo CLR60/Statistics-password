@@ -17,7 +17,6 @@
 	session_start();
 	if ($_SESSION["role"] == "a") {
 		$btnAdmin = true; 
-		echo 'test';
 	}
 	?>
 	<?php

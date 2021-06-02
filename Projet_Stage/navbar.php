@@ -6,7 +6,7 @@
 	<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
 		<div class="clearfix">
 			<a class="navbar-brand float-start" href="#footer">
-				<img src="" width="30" height="30" alt="LOGO">
+				<img src="images/logo.jpg" width="100" height="40" alt="LOGO">
 			</a>
 			<?php 
 			if (isset($btnAdmin)) {
