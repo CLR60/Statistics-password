@@ -12,16 +12,16 @@ window.onload = function () {
             indexLabelFontColor: "#5A5757",
             indexLabelPlacement: "outside",
             dataPoints: [
-                { x: 1, y: 71, indexLabel: "Highest"},
-                { x: 2, y: 55, indexLabel: "Highest" },
-                { x: 3, y: 50, indexLabel: "Highest"},
-                { x: 4, y: 65, indexLabel: "Highest"},
-                { x: 5, y: 92, indexLabel: "Highest"},
-                { x: 6, y: 68, indexLabel: "Highest"},
-                { x: 7, y: 38, indexLabel: "Highest"},
-                { x: 8, y: 71, indexLabel: "Highest"},
-                { x: 9, y: 54, indexLabel: "Highest"},
-                { x: 10, y: 60, indexLabel: "Highest"}
+                { x: 1, y: arrayPassRepeat[1], indexLabel: arrayPassRepeat[0]},
+                { x: 2, y: arrayPassRepeat[3], indexLabel: arrayPassRepeat[2] },
+                { x: 3, y: arrayPassRepeat[5], indexLabel: arrayPassRepeat[4]},
+                { x: 4, y: arrayPassRepeat[7], indexLabel: arrayPassRepeat[6]},
+                { x: 5, y: arrayPassRepeat[9], indexLabel: arrayPassRepeat[8]},
+                { x: 6, y: arrayPassRepeat[11], indexLabel: arrayPassRepeat[10]},
+                { x: 7, y: arrayPassRepeat[13], indexLabel: arrayPassRepeat[12]},
+                { x: 8, y: arrayPassRepeat[15], indexLabel: arrayPassRepeat[14]},
+                { x: 9, y: arrayPassRepeat[17], indexLabel: arrayPassRepeat[16]},
+                { x: 10, y: arrayPassRepeat[19], indexLabel: arrayPassRepeat[18]}
             ]
         }]
     });

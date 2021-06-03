@@ -6,7 +6,7 @@ mydb = mysql.connector.connect(
     host="localhost",
     user="root",
     password="root",
-    database="project_leak"
+    database="stats_pass"
 )
 mycursor = mydb.cursor()
 def comit(sql, val=None, comit=True, fetch=None):
