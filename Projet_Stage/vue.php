@@ -9,6 +9,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/vueStyle.css">
+	<script src="canvas/canvasjs.min.js"></script>
+	<script src="script.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -17,11 +19,28 @@
 	session_start();
 	if ($_SESSION["role"] == "a") {
 		$btnAdmin = true; 
+	} else {
+		header("Location: index.php");
 	}
 	?>
 	<?php
 	include('navbar.php');
-	require("contact/connexion.php");
+	require("data.php");
+	?>
+
+	<script>
+		var arrayPassRepeat = 0;
+		var averageCharPass = <?php echo $averageCharPass; ?>;
+		var averageNumPass = <?php echo $averageNumPass; ?>;
+		var averageSpePass = <?php echo $averageSpePass; ?>;
+	</script>
+
+	<?php
+		var_dump($repeatedPass);
+		var_dump($averageCharPass);
+		var_dump($averageNumPass);
+		var_dump($averageSpePass);
+
 	?>
 
 
@@ -30,14 +49,14 @@
 
 	<div class="grille">
 		<div class="grid-item">
+
+		</div>
+
+		<div class="grid-item" id="histogramme">
 			
 		</div>
 
-		<div class="grid-item">
-			
-		</div>
-
-		<div class="grid-item">
+		<div class="grid-item" id="pie">
 			
 		</div>
 

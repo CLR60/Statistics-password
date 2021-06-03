@@ -18,9 +18,9 @@
 		?>
 
 		<?php
-		require("contact/connexion.php");
+		require("DB/connection.php");
 		session_start();
-		$co = connexionBdd();
+		$co = connectionDb();
 		$message = "";
 
 	      //Connexion de l'utilisateur si le pseudo et le mot de passe est bon
