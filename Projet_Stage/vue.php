@@ -69,7 +69,11 @@
 
 	<div class="grille">
 		<div class="grid-item">
-
+			<div class="container">
+				<p>Longueur moyenne des mots de passe : <span></span></p>
+				<p>Longueur maximale des mots de passe :  <span></span></p>
+				<p>Longueur minimum des mots de passe : <span></span></p>
+			</div>
 		</div>
 
 		<div class="grid-item" id="histogramme">
