@@ -26,7 +26,7 @@
 	      //Connexion de l'utilisateur si le pseudo et le mot de passe est bon
 		if (isset($_POST["submit"])) {
 			$pseudo = $_POST["pseudo"];
-			$password = $_POST["password"];
+			$password = hash("sha256", $_POST["password"]);
 
 			$query = $co->prepare("SELECT * FROM user WHERE name_user=:name_user and password_user=:password_user");
 			$query->bindParam(":name_user", $pseudo);
