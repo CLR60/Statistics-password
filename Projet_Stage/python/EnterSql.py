@@ -6,7 +6,7 @@ mydb = mysql.connector.connect(
     host="localhost",
     user="root",
     password="root",
-    database="stats_pass"
+    database="project_leak"
 )
 mycursor = mydb.cursor()
 def comit(sql, val=None, comit=True, fetch=None):
@@ -97,12 +97,20 @@ def SQL(type, preset=None, dataToComit=None, table=None, column=None, join='', w
                     DICT[column.split(",")[i]] = sort[i]
                 ret.append(DICT)
             return ret
-with open('testfile.txt', 'r') as file:
-    read = (file.read())
-    contentLine = read.split('*Âµ')
-    NumSep = len(contentLine)-2
-    Sep = read.split('*Âµ')[0]
-    
+
+try:
+    with open('testfile.txt', 'r') as file:
+        read = (file.read())
+        contentLine = read.split('*Âµ')
+        NumSep = len(contentLine)-2
+        Sep = read.split('*Âµ')[0]
+except Exception as e:
+    print(e)
+    exit()
+try:
+    os.remove('testfile.txt')
+except:
+    pass
     
 os.chdir("fileToComit")
 
@@ -123,25 +131,7 @@ try:
                 DICT.append(ret)
 except Exception as e:
     print(e)
+    exit()
+os.remove(os.listdir()[0])
 print('good')
 SQL("insert", dataToComit=DICT)
-
-# test = {"test" : 4}
-# print(test["test"])
-
-
-# ret = (SQL("select", 1))
-# for result in ret:
-#     print(result)
-# SQL([["tes", "pass"], ["other", "password"]], "insert", 1)
-
-# sql = "INSERT INTO user (name_user, password_user, role_user) VALUES (%s, %s, %s)"
-# val = ("John", "password", "a")
-# sql = "SELECT email from email"
-# for email in comit(sql, comit=False, fetch=True):
-#     print(email[0])
-
-# for i in os.listdir():
-#     with open(i, "r") as file:
-#         for line in file.read().splitlines():
-#             data = line.split(":")
