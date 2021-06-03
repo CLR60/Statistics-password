@@ -1,8 +1,14 @@
 import os
-import mysql.connector
+try:
+    import mysql.connector
+except:
+    os.system('pwy -m pip install mysql-connector')
+finally:
+    import mysql.connector as SQLConnect
+
 import time
 time.sleep(1)
-mydb = mysql.connector.connect(
+mydb = SQLConnect.connect(
     host="localhost",
     user="root",
     password="root",
