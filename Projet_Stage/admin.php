@@ -72,7 +72,7 @@ if (isset($_POST['submitFile'])){
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/adminStyle.css">
-	<script type="text/javascript" src="script.js"></script>
+	<script src="script.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 	<?php
@@ -125,7 +125,7 @@ if (isset($_POST['submitFile'])){
 							</thead>
 						<tbody>
 							<?php
-							require("DB/connection.php.php");
+							require("DB/connection.php");
 							$co = connectionDb();
 							$query = $co->prepare("select * from user");
 							$query->execute();
