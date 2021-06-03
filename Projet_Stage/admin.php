@@ -125,8 +125,8 @@ if (isset($_POST['submitFile'])){
 							</thead>
 						<tbody>
 							<?php
-							require("contact/connexion.php");
-							$co = connexionBdd();
+							require("DB/connection.php.php");
+							$co = connectionDb();
 							$query = $co->prepare("select * from user");
 							$query->execute();
 							while($donnée = $query->fetch()){
